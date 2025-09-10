@@ -1,8 +1,8 @@
 'use client';
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 
-export default function AccessPage() {
+function AccessContent() {
   const params = useSearchParams();
   const nextPath = params.get('next') || '/';
   const router = useRouter();
@@ -59,5 +59,13 @@ export default function AccessPage() {
         </form>
       </div>
     </div>
+  );
+}
+
+export default function AccessPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-gray-500">Loading...</div>}>
+      <AccessContent />
+    </Suspense>
   );
 }
