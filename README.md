@@ -156,6 +156,7 @@ Create `.env.local` for environment-specific configuration:
 NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_domain
 # ... other Firebase config
+ACCESS_CODE=your_secret_gate_code
 ```
 
 ### Deploying to Vercel
@@ -172,6 +173,7 @@ NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=parentaleye-64fc0.appspot.com
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=338384567214
 NEXT_PUBLIC_FIREBASE_APP_ID=1:338384567214:web:32a9c10f051a4e307ba63f
 NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=G-DH4425ZXEV
+ACCESS_CODE=your_prod_gate_code
 ```
 4. Framework preset: Next.js (auto-detected)
 5. Root directory: leave blank (project root)
